@@ -133,3 +133,9 @@ footer {
     float: left;
     margin-right: 1em;
 }
+
+@media print {
+    aside, nav {
+        display: none;
+    }
+}
