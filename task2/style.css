@@ -1,0 +1,122 @@
+body {
+    font-size: calc(10px + 0.35vw);
+    font-family: sans-serif;
+
+    margin: 2em;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+* + * {
+    margin-top: 1em;
+}
+
+/* navbar stuff */
+nav {
+    padding-bottom: calc(20px + 1.2em);
+}
+
+nav ul
+{
+	list-style: none;
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li a
+{
+	display: block;
+	text-decoration: none;
+	padding: 10px 15px;
+	color: #573aea;
+    transition: color 0.1s;
+}
+
+nav ul li
+{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	background-color: gainsboro;
+    transition: background-color 0.1s;
+}
+
+nav ul li:hover
+{
+	background-color: #573aea;
+}
+
+nav ul li:hover > a
+{
+	color: gainsboro;
+}
+
+nav ul ul
+{
+	display: block;
+    visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	padding: 0;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.1s;
+}
+
+nav ul ul li
+{
+	float: none;
+	width: 200px;
+}
+
+nav ul ul ul
+{
+	top: 0;
+	left: 100%;
+}
+
+nav ul li:hover > ul
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* the rest */
+.pre {
+    white-space: pre;
+    font-family: monospace;
+}
+
+video, img {
+    display: block;
+    width: 20em;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex > * {
+    flex-grow: 1;
+    padding: 2em;
+    background-color: gainsboro;
+}
+
+.flex > * + * {
+    margin-top: 0;
+    margin-left: 2em;
+}
+
+.flex > * > * {
+    display: block;
+}
+
+footer {
+    padding: 0.5em;
+    background-color: gainsboro;
+    text-align: right;
+}
