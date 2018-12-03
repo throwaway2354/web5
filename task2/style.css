@@ -120,3 +120,16 @@ footer {
     background-color: gainsboro;
     text-align: right;
 }
+
+.verse {
+    text-align: center;
+}
+
+.verse.author {
+    text-align: right;
+}
+
+.text-around {
+    float: left;
+    margin-right: 1em;
+}
