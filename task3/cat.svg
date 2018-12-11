@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    viewBox="0 0 100 100"
+    height="700"
+    width="700"
+  >
+  <defs>
+    <g id="whiskers">
+      <line x1="3" y1="40" x2="30" y2="50" stroke="black" />
+      <line x1="0" y1="50" x2="30" y2="50" stroke="black" />
+      <line x1="3" y1="60" x2="30" y2="50" stroke="black" />
+    </g>
+
+    <polyline id="ear" points="20,50 20,0 50,50" />
+
+    <g id="eye">
+      <ellipse rx="5" ry="5" fill="white" />
+      <ellipse rx="2" ry="5" fill="black" />
+    </g>
+  </defs>
+
+  <use xlink:href="#ear" />
+  <use xlink:href="#ear" transform="translate(100) scale(-1, 1)" />
+
+  <ellipse cx="50" cy="50" rx="40" ry="30" fill="gainsboro" />
+
+  <use xlink:href="#eye" x="33" y="35" />
+  <use xlink:href="#eye" x="66" y="35" />
+
+  <use xlink:href="#whiskers" />
+  <use xlink:href="#whiskers" transform="translate(100) scale(-1, 1)" />
+
+  <line x1="32" y1="63" x2="70" y2="63" stroke="black" stroke-width="13" stroke-dasharray="4" />
+  <line x1="32" y1="63" x2="70" y2="63" stroke="gainsboro" stroke-width="2" />
+
+  <ellipse cx="50" cy="47" rx="2" ry="2" fill="black" />
+</svg>
