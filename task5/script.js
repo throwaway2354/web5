@@ -51,8 +51,17 @@ function makeElements(template, ul) {
     }
   }
 }
+
 var ul = document.body.appendChild(document.createElement('ul'));
 for (child of m) {
   makeElements(child, ul);
 }
 
+function listElements(el) {
+  console.log(el.tagName, el.firstChild.nodeValue);
+  for (child of el.children) {
+    listElements(child);
+  }
+}
+
+listElements(ul);
