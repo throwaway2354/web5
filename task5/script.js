@@ -1,3 +1,7 @@
+$.fn.immediateText = function() {
+    return this.contents().not(this.children()).text();
+};
+
 var m = [
   {
     text: 'Животные',
@@ -42,26 +46,28 @@ var m = [
 ];
 
 function makeElements(template, ul) {
-  var li = ul.appendChild(document.createElement('li'));
-  li.appendChild(document.createTextNode(template.text));
+  var li = $('<li></li>').text(template.text);
   if (template.children) {
-    var newUl = li.appendChild(document.createElement('ul'));
+    var newUl = $('<ul></ul>');
     for (child of template.children) {
       makeElements(child, newUl);
     }
+    $(li).append(newUl);
   }
+  $(ul).append(li);
 }
 
-var ul = document.body.appendChild(document.createElement('ul'));
+var ul = $('<ul></ul>');
 for (child of m) {
   makeElements(child, ul);
 }
+$('body').append(ul);
 
-function listElements(el) {
-  console.log(el.tagName, el.firstChild.nodeValue);
-  for (child of el.children) {
-    listElements(child);
-  }
-}
+$('li').each(function() {
+  console.log($(this).immediateText(), $(this).find('li').length);
+});
 
-listElements(ul);
+$('ul').click(function(e) {
+  $(e.target).children().slideToggle('slow');
+  e.stopPropagation();
+});
