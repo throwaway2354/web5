@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.js"></script>
+  <script src="script.js"></script>
+</head>
+  <body onload="init();">
+	<canvas id="canvas" width="600" height="400" onclick="goInput(event);">
+	</canvas>
+	<form>
+		<input type="button" value="Движение" onclick="move()">
+		<input type="button" value="Стоп" onclick="clearInterval(idTimer);">
+	</form>
+</body>
+</html>
